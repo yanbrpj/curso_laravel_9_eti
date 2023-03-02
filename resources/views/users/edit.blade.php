@@ -2,7 +2,7 @@
 @section('title', "Editar {$user->name}")
 
 @section('content')
-    <h1>Editar - {{ $user->name }}</h1>
+    <h1>Editar - {{ $user->name }} - <a href="{{ route('users.index') }}">Listagem</a></h1>
     
     @if ($errors->any())
         <ul>
