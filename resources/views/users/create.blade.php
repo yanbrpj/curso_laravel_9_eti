@@ -2,7 +2,7 @@
 @section('title', "Criar Usuário")
 
 @section('content')
-    <h1>Criar Usuário</h1>
+    <h1>Criar Usuário - <a href="{{ route('users.index') }}">Listagem</a></h1>
     
     @if ($errors->any())
         <ul>
