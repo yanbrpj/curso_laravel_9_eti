@@ -33,7 +33,12 @@ class Usercontroller extends Controller
         return view('users.create');
     }
 
-    public function store() {
-        return "Cadastrando user";
+    public function store(Request $request) {
+        $data = $request->all();
+        $data['password'] = bcrypt($request->password);
+
+        User::create($data);
+
+        return redirect()->route('users.index');
     }
 }
