@@ -28,4 +28,12 @@ class Usercontroller extends Controller
             'user' => $user,
         ]);
     }
+
+    public function create() {
+        return view('users.create');
+    }
+
+    public function store() {
+        return "Cadastrando user";
+    }
 }
